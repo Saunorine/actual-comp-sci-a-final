@@ -1,1 +1,17 @@
+import java.util.Scanner;
 
+public class mainStory extends ConsoleProgram {
+	int playerHealth = 100;
+	int playerGold = 0;
+
+	public static void main(String[] args) {
+    	String playerName = readLine("What is your name");
+    	System.out.println("filler " + playerName + " more filler");
+  }
+}
+
+
+public class Act1 extends mainStory{
+	System.out.println("");
+  
+}
