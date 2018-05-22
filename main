@@ -6,25 +6,35 @@ import java.util.Scanner;
 public class MyProgram{
     
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
         System.out.println("I slowly open my eyes.");
         System.out.println("It feels like I've been sleeping for years.");
         System.out.println("I feel lost and confused, all I have is my wallet right now");
         choice1();
     }
     
+    //choice 1
     private static void choice1(){
         String c1 = "";
         Scanner sc = new Scanner(System.in);
         System.out.println("Should I open my wallet and look for clues?");
         String wallet = sc.next();
         if(wallet.equals("yes")){
-            c1 = ("You pull out and ID, it reads 'Borat Matisse'.");
+            c1 = ("You pull out an ID, it reads 'Borat Matisse'.");
             System.out.println(c1);
         }
-        else{
+        else if(wallet.equals("no")){
             c1 = ("Its not important anyways, I gotta get out of here first.");
             System.out.println(c1);
         }
+        //repeats question if not answered correctly
+        else{
+            System.out.println("(yes or no)");
+            choice1();
+        }
+    }
+    
+    private static void choice2(){
+        System.out.println("asdasd");
+        
     }
 }
