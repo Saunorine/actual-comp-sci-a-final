@@ -3,25 +3,28 @@ import java.lang.*;
 import java.io.*;
 import java.util.Scanner;
 
-public class projectSource{
-    
-    int playerHealth = 80;
+public class MyProgram{
     
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        
-        
-        
         System.out.println("I slowly open my eyes.");
         System.out.println("It feels like I've been sleeping for years.");
         System.out.println("I feel lost and confused, all I have is my wallet right now");
+        choice1();
+    }
+    
+    private static void choice1(){
+        String c1 = "";
+        Scanner sc = new Scanner(System.in);
         System.out.println("Should I open my wallet and look for clues?");
         String wallet = sc.next();
         if(wallet.equals("yes")){
-            System.out.println("You pull out and ID, it reads 'Borat Matisse'.");
+            c1 = ("You pull out and ID, it reads 'Borat Matisse'.");
+            System.out.println(c1);
         }
         else{
-            System.out.println("Its not important anyways, I gotta get out of here first.");
+            c1 = ("Its not important anyways, I gotta get out of here first.");
+            System.out.println(c1);
         }
     }
 }
