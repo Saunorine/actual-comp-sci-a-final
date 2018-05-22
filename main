@@ -1,17 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
 import java.util.Scanner;
 
-public class mainStory extends ConsoleProgram {
-	int playerHealth = 100;
-	int playerGold = 0;
-
-	public static void main(String[] args) {
-    	String playerName = readLine("What is your name");
-    	System.out.println("filler " + playerName + " more filler");
-  }
-}
-
-
-public class Act1 extends mainStory{
-	System.out.println("");
-  
+public class projectSource{
+    
+    int playerHealth = 80;
+    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        
+        
+        
+        System.out.println("I slowly open my eyes.");
+        System.out.println("It feels like I've been sleeping for years.");
+        System.out.println("I feel lost and confused, all I have is my wallet right now");
+        System.out.println("Should I open my wallet and look for clues?");
+        String wallet = sc.next();
+        if(wallet.equals("yes")){
+            System.out.println("You pull out and ID, it reads 'Borat Matisse'.");
+        }
+        else{
+            System.out.println("Its not important anyways, I gotta get out of here first.");
+        }
+    }
 }
