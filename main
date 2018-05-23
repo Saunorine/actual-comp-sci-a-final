@@ -5,26 +5,29 @@ import java.util.Scanner;
 
 public class MyProgram{
     
+    Boolean ID = false;
+    
     public static void main(String[] args){
         System.out.println("I slowly open my eyes.");
         System.out.println("It feels like I've been sleeping for years.");
         System.out.println("I feel lost and confused, all I have is my wallet right now");
         choice1();
+        choice2();
+        scenario2();
     }
     
     //choice 1
     private static void choice1(){
-        String c1 = "";
         Scanner sc = new Scanner(System.in);
         System.out.println("Should I open my wallet and look for clues?");
         String wallet = sc.next();
         if(wallet.equals("yes")){
-            c1 = ("You pull out an ID, it reads 'Borat Matisse'.");
-            System.out.println(c1);
+            Boolean ID = true;
+            System.out.println("You serach the wallet and find some bills and an ID, it reads 'Borat Matisse'.");
+            System.out.println("At least I know something now, better look around to get out of here.");
         }
         else if(wallet.equals("no")){
-            c1 = ("Its not important anyways, I gotta get out of here first.");
-            System.out.println(c1);
+            System.out.println("Its not important anyways, I gotta get out of here first.");
         }
         //repeats question if not answered correctly
         else{
@@ -34,7 +37,37 @@ public class MyProgram{
     }
     
     private static void choice2(){
-        System.out.println("asdasd");
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("There's two doors, one looks like its open");
+        System.out.println("and the other one looks like its locked.");
+        String door1 = sc.next();
+        if(door1.equals("open")){
+            System.out.println("");
+            System.out.println("I entered the door and it instantly hits me, the foul stench");
+            System.out.println("of piss and place crawling with cockroaches.");
+            System.out.println("'Ugh smells terrible,' I feel my stomach turn as I suddenly");
+            System.out.println("find myself face to face with the ground and black out.");
+            System.out.println("");
+        }
+        //will redirect to kitchen no matter what
+        else if(door1.equals("locked")){
+            System.out.println("");
+            System.out.println("Shit, the door's actually locked, might as well try the kitchen.");
+          	System.out.println("I entered the door and it instantly hits me, the foul stench");
+            System.out.println("of piss and place crawling with cockroaches.");
+            System.out.println("'Ugh smells terrible,' I feel my stomach turn as I suddenly");
+            System.out.println("find myself face to face with the ground and black out.");
+            System.out.println("");
+        }
+        else{
+            System.out.println("(open or locked)");
+            choice2();
+        }
+    }
+    
+    private static void scenario2(){
+        System.out.println("I woke up the the stench of piss once more, it's daytime now.");
+        System.out.println("");
     }
 }
